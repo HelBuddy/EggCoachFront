@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  // 독립 실행형 출력 설정 추가
+  output: 'standalone',
+
   // TurboPack 설정 -> 개발 환경
   experimental: {
     turbo: {
