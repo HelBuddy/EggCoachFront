@@ -61,12 +61,9 @@ jobs:
 
       - name: SSH into EC2 and deploy with Podman
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@${{ secrets.AWS_EC2_IP }} << EOF
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@${{ secrets.AWS_EC2_IP }} << 'EOF'
             sudo podman pull ${{ secrets.DOCKER_USERNAME }}/eggcoachfront:latest
             sudo podman stop eggcoachfront || true
             sudo podman rm eggcoachfront || true
-            sudo podman run -d --name eggcoachfront -p 3000:3000 \
-              # -e NODE_ENV=production \
-              # -e NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} \
-              ${{ secrets.DOCKER_USERNAME }}/eggcoachfront:latest
+            sudo podman run -d --name eggcoachfront -p 3000:3000 ${{ secrets.DOCKER_USERNAME }}/eggcoachfront:latest
           EOF
