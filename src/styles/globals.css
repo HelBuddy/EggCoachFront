@@ -1,1 +1,95 @@
 @import 'tailwindcss';
+
+:root {
+  --color-main-1: #3866dc;
+  --color-main-2: #ffcc00;
+
+  --color-sub-1: #e7e7e7;
+  --color-sub-2: #ff7474;
+  --color-sub-3: #a7bae7;
+
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+}
+
+@layer base {
+  .text-main-1 {
+    color: var(--color-main-1);
+  }
+  .bg-main-1 {
+    background-color: var(--color-main-1);
+  }
+  .text-main-2 {
+    color: var(--color-main-2);
+  }
+  .bg-main-2 {
+    background-color: var(--color-main-2);
+  }
+
+  .text-sub-1 {
+    color: var(--color-sub-1);
+  }
+  .bg-sub-1 {
+    background-color: var(--color-sub-1);
+  }
+  .text-sub-2 {
+    color: var(--color-sub-2);
+  }
+  .bg-sub-2 {
+    background-color: var(--color-sub-2);
+  }
+  .text-sub-3 {
+    color: var(--color-sub-3);
+  }
+  .bg-sub-3 {
+    background-color: var(--color-sub-3);
+  }
+
+  .title-lg {
+    font-size: 30px;
+    font-weight: var(--font-weight-semibold);
+  }
+  .title-md {
+    font-size: 22px;
+    font-weight: var(--font-weight-semibold);
+  }
+  .title-sm {
+    font-size: 18px;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .text-lg {
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+  }
+  .text-md {
+    font-size: 14px;
+    font-weight: var(--font-weight-regular);
+  }
+  .text-sm {
+    font-size: 10px;
+    font-weight: var(--font-weight-regular);
+  }
+
+  @media (min-width: 1440px) {
+    .title-lg {
+      font-size: 46px;
+    }
+    .title-md {
+      font-size: 32px;
+    }
+    .title-sm {
+      font-size: 24px;
+    }
+    .text-lg {
+      font-size: 20px;
+    }
+    .text-md {
+      font-size: 18px;
+    }
+    .text-sm {
+      font-size: 16px;
+    }
+  }
+}
