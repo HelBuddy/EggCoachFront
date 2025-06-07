@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Login = () => {
+const Home = () => {
   return (
     <div className='flex h-[100vh] w-full items-center justify-center'>
-      로그인
+      메인 홈
     </div>
   )
 }
 
-export default Login
+export default Home
