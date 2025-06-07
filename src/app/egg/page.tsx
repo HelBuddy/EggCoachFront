@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Login = () => {
+const Egg = () => {
   return (
     <div className='flex h-[100vh] w-full items-center justify-center'>
-      로그인
+      알키우기
     </div>
   )
 }
 
-export default Login
+export default Egg

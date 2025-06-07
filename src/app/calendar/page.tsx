@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Login = () => {
+const Calendar = () => {
   return (
     <div className='flex h-[100vh] w-full items-center justify-center'>
-      로그인
+      캘린더
     </div>
   )
 }
 
-export default Login
+export default Calendar
