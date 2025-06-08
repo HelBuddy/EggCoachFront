@@ -65,8 +65,5 @@ jobs:
             sudo podman pull ${{ secrets.DOCKER_USERNAME }}/eggcoachfront:latest
             sudo podman stop eggcoachfront || true
             sudo podman rm eggcoachfront || true
-            sudo podman run -d --name eggcoachfront -p 3000:3000 \
-              # -e NODE_ENV=production \
-              # -e NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} \
-              ${{ secrets.DOCKER_USERNAME }}/eggcoachfront:latest
+            sudo podman run -d --name eggcoachfront -p 3000:3000 ${{ secrets.DOCKER_USERNAME }}/eggcoachfront:latest
           EOF
