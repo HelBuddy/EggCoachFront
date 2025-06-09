@@ -10,7 +10,9 @@ import HeaderUser from '../molecules/HeaderUser'
 
 const HeaderContainer = () => {
   const pathName = usePathname()
+
   const noHeaderLinks = ['/login']
+
   return noHeaderLinks.includes(pathName) ? (
     <></>
   ) : (
