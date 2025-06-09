@@ -10,18 +10,19 @@ import HeaderUser from '../molecules/HeaderUser'
 
 const HeaderContainer = () => {
   const pathName = usePathname()
-
   const noHeaderLinks = ['/login']
 
   return noHeaderLinks.includes(pathName) ? (
     <></>
   ) : (
-    <header className='fixed top-0 left-0 flex w-full max-w-[1440px] items-center justify-between bg-white px-[16px] py-[19px] md:left-[50%] md:translate-x-[-50%] md:px-[90px] md:py-[33px]'>
-      <HeaderLogo />
-      <div className='flex items-center'>
-        <HeaderNav pathName={pathName} />
-        <LoginButton />
-        <HeaderUser />
+    <header className='w-full bg-white px-[20px] py-[15px] md:py-0'>
+      <div className='mx-auto flex w-full max-w-[1440px] items-center justify-between'>
+        <HeaderLogo />
+        <div className='flex items-center'>
+          <HeaderNav pathName={pathName} />
+          <LoginButton />
+          <HeaderUser />
+        </div>
       </div>
     </header>
   )

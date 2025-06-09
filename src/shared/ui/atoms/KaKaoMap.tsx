@@ -44,24 +44,19 @@ const KaKaoMap = () => {
   }
 
   return (
-    <div className='w-full'>
-      <h1 className='mb-4 text-2xl font-bold'>카카오맵 범위 확인</h1>
+    <div className='h-[60vh] w-full md:h-[calc(100vh-121.22px)] md:w-[60%]'>
+      {/* <h1 className='mb-4 text-2xl font-bold'>카카오맵 범위 확인</h1>
       <p className='mb-4'>
         현재 지도의 범위:
         <span className='font-semibold text-blue-600'>{currentBounds}</span>
-      </p>
+      </p> */}
       <Map
         id='my-kakao-map'
         center={{
           lng: 127.532010428094,
           lat: 37.2471812542307,
         }}
-        style={{
-          width: '100%',
-          height: '300px',
-          border: '1px solid #ddd',
-          borderRadius: '8px',
-        }}
+        className='h-full w-full'
         level={3}
         onCreate={onMapCreated}
         onBoundsChanged={onBoundsChanged}
