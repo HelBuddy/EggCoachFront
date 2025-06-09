@@ -17,7 +17,7 @@ const HeaderNav = ({ pathName }: { pathName: string }) => {
       src: './nav_link_trainer',
       alt: 'nav link trainer',
       href: '/trainer',
-      name: '트레이너 찾기',
+      name: '트레이너',
     },
     {
       className: 'w-[27px] md:w-[34px]',
@@ -43,7 +43,7 @@ const HeaderNav = ({ pathName }: { pathName: string }) => {
   ]
 
   return (
-    <nav className='fixed bottom-0 left-0 flex w-full items-center justify-between gap-[2.34375vw] bg-white px-[1.406vw] py-[1.823vw] md:static md:mr-[4.323vw] md:w-fit md:items-end'>
+    <nav className='fixed bottom-0 left-0 flex w-full items-center justify-between gap-[2.34375vw] bg-white px-[30px] py-[20px] md:static md:mr-[4.323vw] md:w-fit md:items-end md:pt-[33px] md:pb-0'>
       {navLinks.map((nav, index) => {
         return (
           <div
